@@ -1,19 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {
-  FaMicrophone,
-  FaEllipsisH,
-  FaArrowAltCircleLeft,
-} from 'react-icons/fa';
+import { FaMicrophone, FaEllipsisH } from 'react-icons/fa';
+import { SlArrowLeft } from 'react-icons/sl';
 import './Navbar.css';
 
 function Navbar() {
   return (
     <div className="navigation">
       <NavLink to="/" element>
-        <FaArrowAltCircleLeft className="btn" />
+        <SlArrowLeft className="btn" />
       </NavLink>
-      <h2 className="heading">World Statistics</h2>
+      <h2 className="heading">Countries Statistics</h2>
 
       <div className="position">
         <FaMicrophone />
