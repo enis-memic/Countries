@@ -3,7 +3,6 @@
   height: 100%;
   margin-top: 5rem;
   padding: 0 5rem;
-
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -16,14 +15,14 @@
   margin-bottom: 8rem;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 5px 5px 10px 0px #dfd5d5;
+  box-shadow: 5px 5px 10px 0 #dfd5d5;
   color: var(--light-mode-text);
 }
 
 .main-container.dark .country-card {
   background-color: var(--dark-blue-elements);
   color: var(--color-white);
-  box-shadow: 5px 5px 10px 0px #1a1717;
+  box-shadow: 5px 5px 10px 0 #1a1717;
 }
 
 .country-image {
