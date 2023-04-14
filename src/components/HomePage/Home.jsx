@@ -1,4 +1,5 @@
 import world from '../../images/world.jpg';
+import Country from '../country/Country';
 
 const Home = () => (
   <div className="main">
@@ -7,6 +8,7 @@ const Home = () => (
     <img src={world} alt="world" />
 
     <h2>All Continents</h2>
+    <Country />
   </div>
 );
 

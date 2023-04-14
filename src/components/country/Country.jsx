@@ -1,33 +1,65 @@
+/*eslint-disable*/
 import './country.css';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { showAllCountries } from '../../redux/countries/countriesAction';
+// import { reset } from '../../redux/countries/countriesSlice';
 
-const Country = () => (
-  <section className="country-container">
-    <div
-        // onClick={() => dispatch(searchByName(item.cioc.toLowerCase()))}
-      className="country-card"
-      key=""
-    >
-      <img src="#" alt="" className="country-image" />
-      <div className="country-content">
-        <h3> </h3>
-        <p>
-          Population:
-          {' '}
-          <span />
-        </p>
-        <p>
-          Region:
-          {' '}
-          <span />
-        </p>
-        <p>
-          Capital:
-          {' '}
-          <span />
-        </p>
-      </div>
-    </div>
-  </section>
-);
+const Country = () => {
+  const { countriesData, loading, success, error } = useSelector(
+    (state) => state.country
+  );
+
+  const dispatch = useDispatch();
+  const [countryData, setCountryData] = useState([]);
+
+  useEffect(() => {
+    dispatch(showAllCountries());
+    if (success) {
+      setCountryData(countriesData);
+    }
+
+    if (error) {
+      console.log(error);
+    }
+  }, [dispatch, error, success]);
+
+  return (
+    <section className="country-container">
+      {loading ? (
+        <h1>Loading</h1>
+      ) : (
+        countryData.length > 0 &&
+        countryData.map((item, index) => (
+          <Link
+            // onClick={() => dispatch(searchByName(item.cioc.toLowerCase()))}
+            className="country-card"
+            key={index}
+            to={`/${item.cioc}`}
+          >
+            <img
+              src={item.flags.png}
+              alt={item.flags.alt}
+              className="country-image"
+            />
+            <div className="country-content">
+              <h3>{item.name.common} </h3>
+              <p>
+                Population: <span>{item.population}</span>
+              </p>
+              <p>
+                Region: <span>{item.region}</span>
+              </p>
+              <p>
+                Capital: <span>{item.capital}</span>
+              </p>
+            </div>
+          </Link>
+        ))
+      )}
+    </section>
+  );
+};
 
 export default Country;
