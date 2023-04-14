@@ -10,12 +10,10 @@ import {
 // import { reset } from '../../redux/countries/countriesSlice';
 
 const Country = () => {
-  const { countriesData, loading, success, error, region } = useSelector(
-    (state) => state.country
-  );
+  const { countriesData, loading, success, error, region, searchTerm } =
+    useSelector((state) => state.country);
 
   const dispatch = useDispatch();
-  // const [countryData, setCountryData] = useState([]);
 
   useEffect(() => {
     dispatch(showAllCountries());
@@ -29,13 +27,17 @@ const Country = () => {
     }
   }, [dispatch, error, success, region]);
 
+  const data = countriesData.filter((item) =>
+    item.name.common.toLowerCase().includes(searchTerm)
+  );
+
   return (
     <section className="country-container">
       {loading ? (
         <h1>Loading</h1>
       ) : (
-        countriesData.length > 0 &&
-        countriesData.map((item, index) => (
+        data.length > 0 &&
+        data.map((item, index) => (
           <Link
             // onClick={() => dispatch(searchByName(item.cioc.toLowerCase()))}
             className="country-card"

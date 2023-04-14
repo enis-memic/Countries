@@ -1,6 +1,6 @@
 import world from '../../images/world.jpg';
 import Country from '../country/Country';
-// import Search from '../input/search/Search';
+import Search from '../input/search/Search';
 import Filter from '../input/filter/Filter';
 
 const Home = () => (
@@ -9,7 +9,7 @@ const Home = () => (
 
     <img src={world} alt="world" />
     <div>
-      {/* <Search /> */}
+      <Search />
       <Filter />
     </div>
 
