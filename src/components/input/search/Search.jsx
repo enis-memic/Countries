@@ -1,5 +1,3 @@
-import './search.css';
-
 const Search = () => (
   <section className="search-container">
     <div className="search-icon">

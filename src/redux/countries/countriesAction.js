@@ -26,3 +26,17 @@ export const searchByCode = createAsyncThunk(
     }
   },
 );
+
+export const searchByRegion = createAsyncThunk(
+  'countries,searchByRegion',
+  async (region, thunkAPI) => {
+    try {
+      const response = await axios.get(
+        `https://restcountries.com/v3.1/region/${region}`,
+      );
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.response.data);
+    }
+  },
+);
