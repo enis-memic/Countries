@@ -38,12 +38,7 @@ const Country = () => {
       ) : (
         data.length > 0 &&
         data.map((item, index) => (
-          <Link
-            // onClick={() => dispatch(searchByName(item.cioc.toLowerCase()))}
-            className="country-card"
-            key={index}
-            to={`/${item.cioc}`}
-          >
+          <Link className="country-card" key={index} to={`/${item.cioc}`}>
             <img
               src={item.flags.png}
               alt={item.flags.alt}
