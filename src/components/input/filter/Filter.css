@@ -1,0 +1,44 @@
+.filter-container {
+  width: 20%;
+
+  /* padding: 1rem 2rem; */
+
+  display: inline-block;
+  position: relative;
+}
+
+.filter {
+  width: 8rem;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.filter form {
+  flex: 1;
+}
+
+.filter-input {
+  font-family: 'Nunito Sans', sans-serif;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+}
+
+.filter-input:focus {
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  margin-top: 2px;
+  background-color: rgba(114, 37, 93, 0.518);
+  border-radius: 5px;
+  min-width: 100%;
+}
+
+.dropdown-item {
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+}

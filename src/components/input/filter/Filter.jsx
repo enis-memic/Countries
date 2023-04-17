@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { reset, setRegion } from '../../../redux/countries/countriesSlice';
+import './Filter.css';
 
 const Filter = () => {
   const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
