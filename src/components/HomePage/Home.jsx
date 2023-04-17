@@ -6,8 +6,6 @@ import './Home.css';
 
 const Home = () => (
   <div className="main">
-    <h2 className="h2">World</h2>
-
     <img src={world} alt="world" />
     <div className="options-div">
       <Search />

@@ -6,7 +6,7 @@ import './Navbar.css';
 function Navbar() {
   return (
     <div className="navigation">
-      <NavLink to="/" element>
+      <NavLink to="/">
         <FaChevronLeft className="icon-nav" />
       </NavLink>
       <h1 className="heading">Countries</h1>

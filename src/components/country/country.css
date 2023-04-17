@@ -13,7 +13,7 @@
   cursor: pointer;
   text-decoration: none;
   box-shadow: 5px 5px 10px 0 #dfd5d5;
-  color: var(--light-mode-text);
+  color: white;
   background-color: rgba(114, 37, 93, 0.518);
 }
 
@@ -43,4 +43,27 @@
 .more {
   font-size: 15px;
   font-weight: 300;
+}
+
+.more:hover {
+  color: black;
+}
+
+@media (min-width: 480px) {
+  .country-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 2rem;
+  }
+
+  .country-card {
+    padding: 2rem;
+  }
+
+  .country-content h3 {
+    font-size: 30px;
+  }
+
+  .country-content p {
+    font-size: 20px;
+  }
 }
