@@ -8,13 +8,13 @@ function Navbar() {
   return (
     <div className="navigation">
       <NavLink to="/" element>
-        <SlArrowLeft className="btn" />
+        <SlArrowLeft className="icon-nav" />
       </NavLink>
       <h2 className="heading">Countries Statistics</h2>
 
       <div className="position">
-        <FaMicrophone />
-        <FaEllipsisH />
+        <FaMicrophone className="icon-nav" />
+        <FaEllipsisH className="icon-nav" />
       </div>
     </div>
   );
