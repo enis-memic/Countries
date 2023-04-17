@@ -1,4 +1,4 @@
-import world from '../../images/world.jpg';
+import world from '../../images/Continents.svg';
 import Country from '../country/Country';
 import Search from '../input/search/Search';
 import Filter from '../input/filter/Filter';

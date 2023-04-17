@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { searchByCode } from '../../redux/countries/countriesAction';
 import { reset } from '../../redux/countries/countriesSlice';
@@ -14,7 +14,7 @@ const CountryDetail = () => {
     }
 
     if (error) {
-      console.log(error);
+      dispatch(error);
     }
     return () => {
       dispatch(reset());
@@ -22,18 +22,12 @@ const CountryDetail = () => {
   }, [dispatch, code, error]);
   return (
     <section className="country-detail-container">
-      <Link className="back-button" to="/">
-        <i className="fa-solid fa-arrow-left" />
-        {' '}
-        Back
-      </Link>
-
       <div className="country-detail-content">
         {countrySearched.length > 0 ? (
           <>
             <img
-              src={countrySearched[0].flags.png}
-              alt={countrySearched[0].flags.alt}
+              src={countrySearched[0].coatOfArms.png}
+              alt={countrySearched[0].coatOfArms.alt}
               className="country-detail-image"
             />
 
@@ -58,9 +52,9 @@ const CountryDetail = () => {
                   </p>
 
                   <p>
-                    Sub Region:
+                    Time Zone:
                     {' '}
-                    <span>{countrySearched[0].subregion}</span>
+                    <span>{countrySearched[0].timezones[0]}</span>
                   </p>
                   <p>
                     Capital:
