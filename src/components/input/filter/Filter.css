@@ -1,14 +1,9 @@
 .filter-container {
-  width: 20%;
-
-  /* padding: 1rem 2rem; */
-
-  display: inline-block;
-  position: relative;
+  width: 40%;
 }
 
 .filter {
-  width: 8rem;
+  width: 10rem;
   border-radius: 5px;
   padding: 1rem;
   display: flex;
@@ -33,12 +28,18 @@
 .dropdown {
   position: absolute;
   margin-top: 2px;
-  background-color: rgba(114, 37, 93, 0.518);
+  background-color: rgba(114, 37, 93, 0.884);
   border-radius: 5px;
-  min-width: 100%;
 }
 
 .dropdown-item {
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 3rem;
   cursor: pointer;
+}
+
+.icon {
+  color: black;
+  width: 2rem;
+  background-color: white;
+  padding: 0.969rem;
 }
