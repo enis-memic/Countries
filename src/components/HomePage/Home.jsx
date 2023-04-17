@@ -2,18 +2,19 @@ import world from '../../images/Continents.svg';
 import Country from '../country/Country';
 import Search from '../input/search/Search';
 import Filter from '../input/filter/Filter';
+import './Home.css';
 
 const Home = () => (
   <div className="main">
     <h2 className="h2">World</h2>
 
     <img src={world} alt="world" />
-    <div>
+    <div className="options-div">
       <Search />
       <Filter />
     </div>
 
-    <h2>All Continents</h2>
+    <h2 className="h2">All Countries</h2>
     <Country />
   </div>
 );
