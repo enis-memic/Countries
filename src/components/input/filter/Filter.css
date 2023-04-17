@@ -19,6 +19,11 @@
   border: none;
   width: 100%;
   padding: 1rem;
+  background-color: rgba(114, 37, 93, 0.518);
+}
+
+.filter-input::placeholder {
+  color: white;
 }
 
 .filter-input:focus {
@@ -38,8 +43,8 @@
 }
 
 .icon {
-  color: black;
+  color: white;
   width: 2rem;
-  background-color: white;
+  background-color: rgba(114, 37, 93, 0.518);
   padding: 0.969rem;
 }

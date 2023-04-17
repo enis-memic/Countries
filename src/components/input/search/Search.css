@@ -11,10 +11,21 @@
 
 .search-input {
   border: none;
-  width: 50%;
+  width: 30%;
   padding: 1rem;
+  background-color: rgba(114, 37, 93, 0.518);
+}
+
+.search-input::placeholder {
+  color: white;
 }
 
 .search-input:focus {
   outline: none;
+}
+
+.icon {
+  color: black;
+  width: 2rem;
+  padding: 0.969rem;
 }

@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { FaSearch } from 'react-icons/fa';
 import { setSearchTerm } from '../../../redux/countries/countriesSlice';
 import './Search.css';
 
@@ -13,11 +14,12 @@ const Search = () => {
     <section className="search-container">
       <input
         type="text"
-        placeholder="Search for a country"
+        placeholder="Search "
         className="search-input"
         value={searchTerm}
         onChange={handleInputValueChange}
       />
+      <FaSearch className="icon" />
     </section>
   );
 };
