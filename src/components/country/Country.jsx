@@ -8,7 +8,6 @@ import {
   showAllCountries,
 } from '../../redux/countries/countriesAction';
 import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-// import { reset } from '../../redux/countries/countriesSlice';
 
 const Country = () => {
   const { countriesData, loading, success, error, region, searchTerm } =
@@ -50,7 +49,7 @@ const Country = () => {
               <p>
                 Population: <span>{item.population}</span>
               </p>
-              <p>
+              <p className="more">
                 Click for more details <BsFillArrowRightCircleFill />
               </p>
             </div>
