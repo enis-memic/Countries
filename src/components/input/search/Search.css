@@ -10,6 +10,7 @@
 }
 
 .search-input {
+  font-family: 'Lato', sans-serif;
   border: none;
   width: 25%;
   padding: 1rem;
