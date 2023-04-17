@@ -1,4 +1,5 @@
 .navigation {
+  font-family: 'Lato', sans-serif;
   background-color: rgba(114, 37, 93, 0.518);
   display: flex;
   align-items: center;
@@ -7,9 +8,9 @@
 }
 
 .heading {
+  font-size: 40px;
   color: white;
   text-decoration: none;
-  font-size: 24px;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
 }
@@ -21,6 +22,11 @@
   font-size: 20px;
 }
 
+.icon-nav {
+  color: white;
+  width: 5rem;
+}
+
 @media (max-width: 480px) {
   .navigation {
     gap: 25px;
@@ -28,7 +34,8 @@
     align-items: center;
   }
 
-  .btn {
-    margin-top: -10px;
+  .icon-nav {
+    color: white;
+    width: 2rem;
   }
 }

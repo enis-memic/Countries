@@ -1,0 +1,36 @@
+.main {
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.h2 {
+  font-size: 20px;
+}
+
+img {
+  width: 80%;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.options-div {
+  display: flex;
+  margin-top: 2rem;
+}
+
+@media (min-width: 480px) {
+  .h2 {
+    font-size: 40px;
+  }
+
+  .options-div {
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 6rem;
+  }
+}

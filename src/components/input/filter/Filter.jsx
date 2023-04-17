@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { FaChevronDown } from 'react-icons/fa';
 import { reset, setRegion } from '../../../redux/countries/countriesSlice';
+import './Filter.css';
 
 const Filter = () => {
   const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
@@ -28,17 +30,17 @@ const Filter = () => {
         <input
           type="text"
           readOnly
-          placeholder="Filter by Region"
+          placeholder="Regions"
           value={filter}
           className="filter-input"
         />
-
-        <i className="fa-solid fa-angle-down" />
+        <FaChevronDown className="icon" />
       </div>
       {displayDropDown ? (
-        <div>
+        <div className="dropdown">
           {regions.map((item, index) => (
             <div
+              className="dropdown-item"
               key={index}
               onClick={() => {
                 setFitler(item);

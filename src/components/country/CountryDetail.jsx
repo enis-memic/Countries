@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { searchByCode } from '../../redux/countries/countriesAction';
 import { reset } from '../../redux/countries/countriesSlice';
+import './CountryDetail.css';
 
 const CountryDetail = () => {
   const { error, countrySearched } = useSelector((state) => state.country);

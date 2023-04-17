@@ -1,18 +1,17 @@
-/*eslint-disable*/
 import './country.css';
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import {
   searchByRegion,
   showAllCountries,
 } from '../../redux/countries/countriesAction';
-import { BsFillArrowRightCircleFill } from 'react-icons/bs';
-// import { reset } from '../../redux/countries/countriesSlice';
 
 const Country = () => {
-  const { countriesData, loading, success, error, region, searchTerm } =
-    useSelector((state) => state.country);
+  const {
+    countriesData, loading, success, error, region, searchTerm,
+  } = useSelector((state) => state.country);
 
   const dispatch = useDispatch();
 
@@ -24,21 +23,19 @@ const Country = () => {
     }
 
     if (error) {
-      console.log(error);
+      dispatch(error);
     }
   }, [dispatch, error, success, region]);
 
-  const data = countriesData.filter((item) =>
-    item.name.common.toLowerCase().includes(searchTerm)
-  );
+  const data = countriesData.filter((item) => item.name.common.toLowerCase().includes(searchTerm));
 
   return (
     <section className="country-container">
       {loading ? (
         <h1>Loading</h1>
       ) : (
-        data.length > 0 &&
-        data.map((item, index) => (
+        data.length > 0
+        && data.map((item, index) => (
           <Link className="country-card" key={index} to={`/${item.cioc}`}>
             <img
               src={item.flags.png}
@@ -46,12 +43,19 @@ const Country = () => {
               className="country-image"
             />
             <div className="country-content">
-              <h3>{item.name.common} </h3>
+              <h3>
+                {item.name.common}
+                {' '}
+              </h3>
               <p>
-                Population: <span>{item.population}</span>
+                Population:
+                {' '}
+                <span>{item.population}</span>
               </p>
-              <p>
-                Click for more details <BsFillArrowRightCircleFill />
+              <p className="more">
+                Click for more details
+                {' '}
+                <BsFillArrowRightCircleFill />
               </p>
             </div>
           </Link>
