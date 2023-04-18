@@ -46,7 +46,7 @@ describe('CountryDetail', () => {
         <MemoryRouter initialEntries={['/code']}>
           <CountryDetail />
         </MemoryRouter>
-      </Provider>
+      </Provider>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });

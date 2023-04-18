@@ -12,7 +12,7 @@ describe('Navbar rendering', () => {
         <BrowserRouter>
           <Country />
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
     expect(render).toMatchSnapshot();
   });

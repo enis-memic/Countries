@@ -4,7 +4,6 @@ describe('store', () => {
   test('should have a default state', () => {
     const expectedState = {
       country: {
-        error: null,
         countriesData: [],
         countrySearched: [],
         error: false,
