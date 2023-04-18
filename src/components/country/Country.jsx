@@ -37,6 +37,10 @@ const Country = () => {
         data.length > 0
         && data.map((item, index) => (
           <Link className="country-card" key={index} to={`/${item.cioc}`}>
+            <p className="more">
+              {' '}
+              <BsFillArrowRightCircleFill className="icon-more" />
+            </p>
             <img
               src={item.flags.png}
               alt={item.flags.alt}
@@ -48,14 +52,8 @@ const Country = () => {
                 {' '}
               </h3>
               <p>
-                Population:
                 {' '}
                 <span>{item.population}</span>
-              </p>
-              <p className="more">
-                Click for more details
-                {' '}
-                <BsFillArrowRightCircleFill />
               </p>
             </div>
           </Link>

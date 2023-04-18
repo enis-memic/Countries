@@ -61,6 +61,10 @@ Clone this repository to your desired folder:
   git clone https://github.com/enis-memic/Countries
 ```
 
+### Run this command to install project packages
+
+> npm install
+
 ### Run this command to run server
 
 > npm start

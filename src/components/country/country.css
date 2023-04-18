@@ -16,6 +16,9 @@
   box-shadow: 5px 5px 10px 0 #dfd5d5;
   color: white;
   background-color: rgba(114, 37, 93, 0.518);
+  display: flex;
+  flex-direction: column;
+  align-items: end;
 }
 
 .country-card:hover {
@@ -26,19 +29,27 @@
 .country-image {
   width: 70%;
   margin-top: 1rem;
+  margin-right: 2rem;
 }
 
 .country-content {
   padding: 2rem;
 }
 
+.country-content h3 {
+  text-transform: uppercase;
+  text-align: right;
+}
+
 .country-content p {
   margin-top: 1rem;
   font-weight: 600;
+  text-align: right;
 }
 
 .country-content p span {
   font-weight: 300;
+  text-align: right;
 }
 
 .more {
@@ -48,6 +59,10 @@
 
 .more:hover {
   color: black;
+}
+
+.icon-more {
+  width: 3rem;
 }
 
 @media (min-width: 480px) {
@@ -66,5 +81,9 @@
 
   .country-content p {
     font-size: 20px;
+  }
+
+  .country-image {
+    margin-right: 5rem;
   }
 }

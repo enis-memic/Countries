@@ -26,21 +26,22 @@ const CountryDetail = () => {
       <div className="country-detail-content">
         {countrySearched.length > 0 ? (
           <>
-            <img
-              src={countrySearched[0].coatOfArms.png}
-              alt={countrySearched[0].coatOfArms.alt}
-              className="country-detail-image"
-            />
+            <div className="header-details">
+              <img
+                src={countrySearched[0].coatOfArms.png}
+                alt={countrySearched[0].coatOfArms.alt}
+                className="country-detail-image"
+              />
+              <h1>{countrySearched[0].name.common}</h1>
+            </div>
 
             <div className="country-detail-right">
-              <h1>{countrySearched[0].name.common}</h1>
               <div className="details">
-                <div className="detail-left">
-                  <p>
-                    Offcial Name:
-                    {' '}
-                    <span>{countrySearched[0].name.official}</span>
-                  </p>
+                <h1>
+                  {' '}
+                  <span>{countrySearched[0].name.official}</span>
+                </h1>
+                <div className="detail-country">
                   <p>
                     Population:
                     {' '}
@@ -62,9 +63,7 @@ const CountryDetail = () => {
                     {' '}
                     <span>{countrySearched[0].capital}</span>
                   </p>
-                </div>
 
-                <div className="detail-right">
                   <p>
                     Top Level Domain:
                     {' '}
