@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountryDetail renders CountryDetail component 1`] = `
+<section
+  class="country-detail-container"
+>
+  <div
+    class="country-detail-content"
+  >
+    <img
+      alt="Test Alt"
+      class="country-detail-image"
+      src="https://test.com/test.png"
+    />
+    <div
+      class="country-detail-right"
+    >
+      <h1>
+        Country Name
+      </h1>
+      <div
+        class="details"
+      >
+        <div
+          class="detail-left"
+        >
+          <p>
+            Offcial Name:
+             
+            <span />
+          </p>
+          <p>
+            Population:
+             
+            <span>
+              1000000
+            </span>
+          </p>
+          <p>
+            Region:
+             
+            <span>
+              Test Region
+            </span>
+          </p>
+          <p>
+            Time Zone:
+             
+            <span>
+              UTC
+            </span>
+          </p>
+          <p>
+            Capital:
+             
+            <span>
+              Test Capital
+            </span>
+          </p>
+        </div>
+        <div
+          class="detail-right"
+        >
+          <p>
+            Top Level Domain:
+             
+            <span>
+              .tld
+            </span>
+          </p>
+          <p>
+            Languages:
+            <span>
+              English,Spanish
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

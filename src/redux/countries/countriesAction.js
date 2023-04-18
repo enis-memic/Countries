@@ -1,42 +1,44 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
 export const showAllCountries = createAsyncThunk(
   'countries/showAll',
   async (_, thunkAPI) => {
     try {
-      const response = await axios.get('https://restcountries.com/v3.1/all');
-      return response.data;
+      const response = await fetch('https://restcountries.com/v3.1/all');
+      const data = await response.json();
+      return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error);
     }
   },
 );
 
 export const searchByCode = createAsyncThunk(
-  'countrie/searchByCode',
+  'countries/searchByCode',
   async (code, thunkAPI) => {
     try {
-      const response = await axios.get(
+      const response = await fetch(
         `https://restcountries.com/v3.1/alpha?codes=${code}`,
       );
-      return response.data;
+      const data = await response.json();
+      return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error);
     }
   },
 );
 
 export const searchByRegion = createAsyncThunk(
-  'countries,searchByRegion',
+  'countries/searchByRegion',
   async (region, thunkAPI) => {
     try {
-      const response = await axios.get(
+      const response = await fetch(
         `https://restcountries.com/v3.1/region/${region}`,
       );
-      return response.data;
+      const data = await response.json();
+      return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data);
+      return thunkAPI.rejectWithValue(error);
     }
   },
 );
